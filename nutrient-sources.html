@@ -3,64 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Tracker</title>
+    <title>Meal Suggestions</title>
     <link rel="shortcut icon" type="image/x-icon" href="bicep.webp">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f7f7f7;
         }
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
-          width: 100%;
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
         }
-        
-        li {
-          float: left;
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
         }
-        
-        li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
+        nav ul li {
+            flex: 1;
         }
-        
-        li a:hover:not(.active) {
-          background-color: #111;
+        nav ul li a {
+            display: block;
+            padding: 14px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
         }
-        
+        nav ul li a:hover {
+            background-color: #111;
+        }
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+          }
+          
+        .topnav .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+          
+         .topnav .search-container button:hover {
+            background: #ccc;
+        }
+          
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover:not(.active) {
+            background-color: #111;
+        }
+
         .active {
-          background-color: #04AA6D;
+            background-color: #04AA6D;
         }
+
         .header {
             padding: 10px;
             text-align: center;
-            background: #111;
+            background-color: #04AA6D;
             color: white;
-            font-size: 15px;
-            margin: 0;
+            font-size: 24px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-left {
+            text-align: left;
+        }
+        
+        .footer-right {
+            text-align: right;
+        }
+        
+        .footer-icon {
+            width: 24px;
+            height: auto;
+        }
+        .footer-content a:visited {
+            color: #ccc;
+        }
+        
+        .footer-right {
+            font-size: 14px;
+        }
+        .footer a {
+            text-decoration: none;
+        }
+        .footer-content a:active {
+            outline: none;
+        }
+        .footer-content a:hover {
+            color: #ddd;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
           }
+        
     </style>
 </head>
 <body>
-    <div class="header"><h1>Gym Tracker</h1></div>
+    <div class="header"><h1>Meal Suggestions and Nutrient Analysis</h1></div>
+    <nav>
     <ul>
         <li><a href="https://romanosgl.github.io/Workout-Tracking">Home</a></li>
         <li><a href="calorie-calculator.html">Calorie Calculator</a></li>
+        <li><a href="tracker.html">Workout Tracking</a></li>
+        <li><a href="#Weight_Loss">Weight Loss</a></li>
+
     </ul>
-
+    </nav>
+    <div class="main container">
+    <div style="margin-left: 10px"><h1>Muscle Gains</h1></div>
+        <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>Protein Rich Foods</h2>
+            <ul>
+                <li><strong>Chicken breast:</strong> Lean, low-fat, and rich in muscle-building amino acids.</li>
+                <li><strong>Turkey:</strong> Another lean, high-protein option similar to chicken.</li>
+                <li><strong>Eggs:</strong> Packed with high-quality protein and healthy fats; yolks provide essential vitamins and minerals.</li>
+                <li><strong>Greek yogurt:</strong> High in protein, especially slow-digesting casein for sustained energy.</li>
+                <li><strong>Cottage cheese:</strong> Like Greek yogurt, rich in casein for prolonged protein absorption.</li>
+                <li><strong>Tuna and salmon:</strong> Both provide protein and omega-3 fats, great for muscle recovery and overall health.</li>
+                <li><strong>Tofu and tempeh:</strong> Excellent plant-based protein sources, ideal for vegetarians.</li>
+            </ul>
+        </div>
+          <div class="card">
+            <h2>Complex Carbohydrates</h2>
+            <ul>
+                <li><strong>Brown rice:</strong> Provides a steady release of energy, ideal for post-workout glycogen replenishment.</li>
+                <li><strong>Quinoa:</strong> A complete protein source with all nine essential amino acids.</li>
+                <li><strong>Oats:</strong> High in fiber and slow-releasing carbs to maintain energy during training.</li>
+                <li><strong>Sweet potatoes:</strong> Rich in fiber and vitamins, offering a great source of complex carbohydrates.</li>
+                <li><strong>Whole wheat pasta or bread:</strong> Provides long-lasting energy and supports muscle glycogen replenishment.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Healthy Fats</h2>
+            <ul>
+                <li><strong>Olive Oil:</strong> Rich in monounsaturated fats, which help reduce inflammation and support heart health.</li>
+                <li><strong>Avocados:</strong> High in healthy fats and nutrients like potassium and fiber.</li>
+                <li><strong>Nuts and Seeds:</strong> Almonds, walnuts, chia seeds, and flaxseeds are rich in healthy fats, protein, and fiber.</li>
+                <li><strong>Fatty Fish (e.g., Salmon):</strong> Full of omega-3 fatty acids, which help reduce muscle inflammation and boost recovery.</li>
+            </uL>
+          </div>
+          <div class="card">
+            <h2>Vegetables</h2>
+            <ul>
+                <li><strong>Leafy Greens (Spinach, Kale): </strong>Packed with vitamins, minerals, and antioxidants, important for overall recovery.</li>
+                <li><strong>Broccoli and Brussels Sprouts: </strong>High in fiber, vitamins, and minerals that support muscle recovery.</li>
+            </uL>
+          </div>
+          <div class="card">
+            <h2>Additional Considerations</h2>
+            <ul>
+                <li><strong>Whey Protein:</strong> If you have trouble getting enough protein from whole foods, whey protein shakes can help boost your intake.</li>
+                <li><strong>Berries (Blueberries, Strawberries):</strong> Full of antioxidants and vitamins that aid recovery.</li>
+                <li><strong>Legumes (Lentils, Chickpeas, Beans):</strong> Great for protein, fiber, and slow-digesting carbs.</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+    <div style="margin-left: 10px" id="Weight_Loss"><h1>For Weight Loss</h1></div>
+        <div class="row">
+        <div class="leftcolumn"></div>
+        <div class="card">
+            <h2>Vegetables</h2>
+            <ul>
+                <li><strong>Leafy Greens (Spinach, Kale): </strong>Low in calories, high in fiber, vitamins, and minerals. Helps fill you up without adding many calories.</li>
+                <li><strong>Cruciferous Vegetables (Broccoli, Cauliflower, Brussels Sprouts, Cabbage): </strong>High in fiber and nutrients, low in calories, and helps provide a feeling of fullness.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Proteins</h2>
+            <ul>
+                <li><strong>Lean Proteins (Chicken Breast, Turkey): </strong>Helps build muscle and can increase metabolism, while keeping you full longer.</li>
+                <li><strong>Tofu: </strong>A plant-based protein source that is low in calories and high in protein.</li>
+                <li><strong>Legumes (Lentils, Chickpeas, Black Beans): </strong>High in protein and fiber, which helps with satiety and weight management.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Grains</h2>
+            <ul>
+                <li><strong>Whole Grains (Brown Rice, Quinoa, Oats, Barley): </strong>Rich in fiber and nutrients, helps maintain stable blood sugar levels and keeps you satisfied.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Fruits</h2>
+            <ul>
+                <li><strong>Berries (Strawberries, Blueberries, Raspberries): </strong>Low in calories, high in antioxidants and fiber, making them a sweet, nutritious option for weight loss.</li>
+                <li><strong>Avocado: </strong>Contains healthy fats and fiber, which help with satiety and provide essential nutrients.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Dairy Alternatives</h2>
+            <ul>
+                <li><strong>Greek Yogurt: </strong>High in protein and probiotics, which aid digestion and keep you full longer. Opt for low-fat or non-fat varieties.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Snacks</h2>
+            <ul>
+                <li><strong>Nuts and Seeds (Almonds, Chia Seeds, Flaxseeds): </strong>Rich in healthy fats, protein, and fiber. Helps control hunger but should be consumed in moderation.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Hydrating Foods</h2>
+            <ul>
+                <li><strong>Cucumbers and Celery: </strong>Very low in calories but high in water content, which helps with hydration and fullness.</li>
+            </ul>
+        </div>
+        </div>
+    </div>
     <script>
-
         
     </script>
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            <a href="https://github.com/romanosgl" target="_blank">
+                <picture>
+                    <source srcset="github-mark/github-mark-white.svg" type="image/svg+xml">
+                    <img src="github-mark/github-mark-white.png" alt="GitHub" class="footer-icon">
+                </picture>
+                Github Profile
+            </a>
+        <div class="footer-right">
+            &copy; 2024 Meal Suggestions
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
